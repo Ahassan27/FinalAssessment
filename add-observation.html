@@ -70,7 +70,7 @@
     <h2>Observation Details</h2>
     <p><span class="required">*</span> Required field</p>
 
-    <form action="https://formspree.io/f/xjvjkoyb" method="post" >
+    <form action="https://formspree.io/f/xjvjkoyb" method="post" onsubmit="return validate()">
       <fieldset>
         <legend>Observation</legend>
 
@@ -102,10 +102,10 @@
         <legend>Location</legend>
         <div id="functionToWork">
         <legend class="redReq">Latitude<span class="required">*</span></legend>
-        <label for="lat_one"></label> <input type="text" id="lat_one" placeholder="43.7955" required onsubmit="return validate()">
+        <label for="lat_one"></label> <input type="text" id="lat_one" placeholder="43.7955" required>
 
         <legend class="redReq">Longitude<span class="required">*</span> </legend>
-        <label for="long_one"></label> <input type="text" id="long_one" placeholder="-79.3496" required onsubmit="return validate()">
+        <label for="long_one"></label> <input type="text" id="long_one" placeholder="-79.3496" required >
         </div>
         <input type="checkbox" id="checkBoxx" value="share"><label for="checkBoxx"> Share location information (i.e., it's ok to make this public)</label>
 

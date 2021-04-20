@@ -1,0 +1,17 @@
+/**
+ * Styles for the add-observation.html page
+ */
+.required{
+  color: #ff0000;
+}
+.expand{
+  width: 510px;
+  margin-top: -10px;
+  /*margin-top: 9px;*/
+}
+.moveLittle{
+  margin-top: -10px;
+}
+
+
+

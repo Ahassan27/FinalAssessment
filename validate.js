@@ -1,4 +1,4 @@
-function validate(lat, long) {
+function validate(event) {
     // TODO - write custom validation logic to validate the longitude and latitude
     // values. The latitude value must be a number between -90 and 90; the
     // longitude value must be a number between -180 and 180. If either/both are
@@ -7,9 +7,7 @@ function validate(lat, long) {
     // submitted.
     //let lat = 0;
     //let lng = 0;
-    let errorMessage = new Error(" must be a valid number between -90 and 90");
-    let errorMessageLong = new Error("must be a valid number between -180 and 180");
-    if (lat >= -90 && lat <= 90 && long >= -180 && long <= 180){
+    if (event >= -90 && event<= 90 && event >= -180 && event <= 180){
 
        if (document.getElementById("functionToWork") !=  null) {
            document.getElementById("functionToWork").submit();
@@ -17,13 +15,13 @@ function validate(lat, long) {
     }
     else{
        if (document.getElementById("lat_one") != null) {
-        if (lat < -90 && lat > 90) {
-            throw errorMessage;
+        if (event < -90 && event > 90) {
+            throw "must be a valid number between -90 and 90";
         }
     }
     if (document.getElementById("long_one") != null) {
-        if (long < -180 && long > 180) {
-            throw errorMessageLong;
+        if (event < -180 && event > 180) {
+            throw "must be a valid number between -180 and 180";
         }
     }
 }

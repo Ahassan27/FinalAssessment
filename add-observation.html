@@ -70,7 +70,7 @@
     <h2>Observation Details</h2>
     <p><span class="required">*</span> Required field</p>
 
-    <form action="https://formspree.io/f/xjvjkoyb" method="post"  onsubmit="return validate()">
+    <form action="https://formspree.io/f/xjvjkoyb" method="post" >
       <fieldset>
         <legend>Observation</legend>
 
@@ -97,15 +97,15 @@
 <!--    </form>-->
 
 <!--    <form id="validateFun" onsubmit="validate()">-->
-      <fieldset>
+      <fieldset >
 
         <legend>Location</legend>
         <div id="functionToWork">
         <legend class="redReq">Latitude<span class="required">*</span></legend>
-        <label for="lat_one"></label> <input type="number" id="lat_one" placeholder="43.7955" required>
+        <label for="lat_one"></label> <input type="text" id="lat_one" placeholder="43.7955" required onsubmit="return validate()">
 
         <legend class="redReq">Longitude<span class="required">*</span> </legend>
-        <label for="long_one"></label> <input type="number" id="long_one" placeholder="-79.3496" required>
+        <label for="long_one"></label> <input type="text" id="long_one" placeholder="-79.3496" required onsubmit="return validate()">
         </div>
         <input type="checkbox" id="checkBoxx" value="share"><label for="checkBoxx"> Share location information (i.e., it's ok to make this public)</label>
 
@@ -118,7 +118,7 @@
         <legend>Photo</legend>
 
         <legend class="redReq">Photographer Name</legend>
-        <label for="photoName"></label> <input class="expand" type="text" id="photoName" placeholder="Karen Shu" maxlength="100">
+        <label for="photoName"></label> <input class="expand" type="text" id="photoName" placeholder="Karen Shu" maxlength="100" >
 
         <legend class="redReq"> Photographer Email </legend>
         <label for="photoEmail"></label><input class="expand" type="text" id="photoEmail" placeholder="kshu@photos.com" >
@@ -137,7 +137,7 @@
         <option value="CC-BY-NC-ND">Creative Commons Attribution-NonCommercial-NoDerivs License</option>
         </select>
       </fieldset>
-  <input class="down" type="submit">
+  <input class="down" type="submit" >
 
     </form>
   </section>

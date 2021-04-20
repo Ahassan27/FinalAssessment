@@ -115,7 +115,7 @@ function toggleLoading(isLoading) {
 
 
     if (isLoading === false) {
-        document.getElementById("buttonLoad").value = "Searching";
+        document.getElementById("buttonLoad").value = "Search";
         document.getElementById("buttonLoad").disabled = false;
     }
 /*    -	When isLoading is true:

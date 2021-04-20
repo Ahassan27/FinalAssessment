@@ -7,25 +7,28 @@ function validate(event) {
     // submitted.
     //let lat = 0;
     //let lng = 0;
-    if (event >= -90 && event<= 90 && event >= -180 && event <= 180){
+    let lati = document.getElementById("lat_one").value;
+    let longi = document.getElementById("long_one").value;
+    let errorMessage = document.getElementById("errorTextLat");
+    let errorMessage_one = document.getElementById("errorTextLong");
+    let valid = true;
+    let valid_one = true;
 
-       if (document.getElementById("functionToWork") !=  null) {
-           document.getElementById("functionToWork").submit();
-       }
-    }
-    else{
-       if (document.getElementById("lat_one") != null) {
-        if (event < -90 && event > 90) {
-            throw "must be a valid number between -90 and 90";
-        }
-    }
-    if (document.getElementById("long_one") != null) {
-        if (event < -180 && event > 180) {
-            throw "must be a valid number between -180 and 180";
-        }
-    }
-}
+    if (lati <= -90 || lati >= 90  || isNaN(lati)){
+        valid = false;
+        errorMessage.append("must be a valid number between -90 and 90");
 
+    }
+    if (valid === false){
+        event.preventDefault();
+    }
+    if (longi <= -180 || longi >= 180 || isNaN(longi)){
+        valid_one = false;
+        errorMessage_one.append("must be a valid number between -180 and 180");
+        }
+   if (valid_one === false){
+       event.preventDefault();
+   }
 
     //console.log('TODO - validate the longitude, latitude values before submitting');
 }
